@@ -29,7 +29,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "node --no-warnings index.js",
+    "start": "node --no-warnings --expose-gc --max-old-space-size=1024 --max-semi-space-size=64 --experimental-global-webcrypto index.js",
     "deploy": "node restart.js",
     "auto": "node auto_restart.js",
     "restart": "restart_wrapper.bat",
@@ -69,7 +69,7 @@
     "audiobuffer": "^0.2.0",
     "axios": "^1.13.6",
     "baileys": "^7.0.0-rc.9",
-    "better-sqlite3": "^12.6.2",
+    "better-sqlite3": "^12.8.0",
     "chalk": "^4.1.2",
     "concurrently": "^8.2.2",
     "css-tree": "^3.2.1",
@@ -103,6 +103,8 @@
     "qs": "^6.15.0",
     "replicate": "^1.4.0",
     "ruhend-scraper": "^9.0.8",
+    "silent-wolf-bot": "file:",
+    "sql.js": "^1.14.1",
     "systeminformation": "^5.31.4",
     "translate-google": "^1.5.0",
     "ws": "^8.19.0"
